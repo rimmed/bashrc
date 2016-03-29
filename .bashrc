@@ -40,3 +40,9 @@ fi
 #ulimit -c unlimited
 
 set completion-ignore-case on
+
+gerrit_patch_push() {
+	git push origin HEAD:refs/changes/$1
+}
+
+alias gpp=gerrit_patch_push

@@ -17,7 +17,17 @@ NORM="\[\033[m\]"
 export EFLETE_PROJECTS_DIR="$HOME/Work/gerrit.surc.kiev/PROJECTS"
 export PATH="$HOME/bin:$PATH"
 
-PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')\n\
+# check the git-promt.sh
+if [ ! -f ~/.git-prompt.sh ]; then
+	wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+fi
+source ~/.git-prompt.sh
+
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUPSTREAM="verbose"
+
+#PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')\n\
+PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(__git_ps1 [%s])\n\
 $LIGHT_PURPLE[\A]$GREEN\u@\h $LIGHT_BLUE~ \$ $NORM"
 PS2=$YELLOW"next line >> "$NORM
 

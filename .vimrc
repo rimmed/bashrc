@@ -17,7 +17,7 @@ Plugin 'MattesGroeger/vim-bookmarks'
 
 Plugin 'vim-scripts/DfrankUtil'
 Plugin 'vim-scripts/vimprj'
-Plugin 'vim-scripts/indexer.tar.gz'
+" Plugin 'vim-scripts/indexer.tar.gz'
 Plugin 'vim-scripts/grep.vim'
 
 Plugin 'git://git.enlightenment.org/editors/vim-configs.git'
@@ -55,7 +55,7 @@ nmap <C-G> <esc>:nohlsearch<cr>
 vmap <C-G> <esc>:nohlsearch<cr>
 
 " показать непечатаемые символы
-set listchars=tab:»\ ,eol:¶,trail:•
+"set listchars=tab:»\ ,eol:¶,trail: ☢`
 " цветовая схема
 colorscheme Yule
 " линия ограничитель
@@ -144,6 +144,8 @@ au FileType c,h,edc inoremap @r @return
 au FileType c,h,edc inoremap @dg @defgroup
 au FileType c,h,edc inoremap @ig @ingroup
 
+au FileType eo inoremap @p @property
+
 " Биндинги для LaTeX
 au FileType tex inoremap %- %---------------------------------------------------------------------------<CR>
 au FileType tex inoremap %= %===========================================================================<CR>
@@ -178,7 +180,7 @@ let g:NERDTreeWinPos = "right"
 
 let NERDTreeHighlightCursorline=1
 let NERDTreeDirArrows=0
-let NERDTreeIgnore=['\.lo$', '\.la$', '\.o$', '\.edj$']
+let NERDTreeIgnore=['\.lo$', '\.la$', '\.o$', '\.edj$', '\.eo.h$', '\.eo.c$']
 let NERDTreeWinPos="right"
 
 

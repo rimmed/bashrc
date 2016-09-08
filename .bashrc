@@ -14,8 +14,12 @@ NORM="\[\033[m\]"
 
 #LD_LIBRARY_PATH="/usr/local/lib/"
 #PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
-export EFLETE_PROJECTS_DIR="$HOME/Work/gerrit.surc.kiev/PROJECTS"
-export PATH="$HOME/bin:$PATH"
+#export EFLETE_PROJECTS_DIR="$HOME/Work/gerrit.surc.kiev/PROJECTS"
+export EFLETE_PROJECTS_DIR="$HOME/Work/PROJECTS"
+export PATH="$PATH:$HOME/bin:$HOME/Work/cov-analysis-linux64-8.5.0.1/bin:$HOME/tizen-sdk/tools"
+
+EFL117="$HOME/Work/sandbox/efl-1.17"
+EFL118="$HOME/Work/sandbox/efl-1.18"
 
 # check the git-promt.sh
 if [ ! -f ~/.git-prompt.sh ]; then
@@ -23,8 +27,8 @@ if [ ! -f ~/.git-prompt.sh ]; then
 fi
 source ~/.git-prompt.sh
 
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUPSTREAM="verbose"
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUPSTREAM="verbose"
 
 #PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')\n\
 PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(__git_ps1 [%s])\n\
@@ -56,3 +60,4 @@ gerrit_patch_push() {
 }
 
 alias gpp=gerrit_patch_push
+eval $(thefuck --alias)

@@ -37,6 +37,18 @@ set autoread
 set t_Co=256
 " подсветка пробелов в кончце строки
 au BufNewFile,BufRead * let b:mtrailingws=matchadd('ErrorMsg', '\s\+$', -1)
+" подсветка пробелов в конце строки
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\s\+$', -1)
+" подсветка if без пробела
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', 'if(', -1)
+" подсветка табуляции
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '	', -1)
+" подсветка условий и циклов без тела
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(if\|for\|while\)\s*(.*)\s*;', -1)
+" подсветка EINA_LIST_ циклов
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(EINA_LIST_FOREACH\|EINA_LIST_REVERSE_FOREACH\|EINA_LIST_FREE\|EINA_LIST_FOREACH_SAFE\|EINA_LIST_REVERSE_FOREACH_SAFE\)\s*(.*)\s*;', -1)
+" подсветка EINA_INLIST_ циклов
+au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(EINA_INLIST_FOREACH\|EINA_INLIST_REVERSE_FOREACH\|EINA_INLIST_FREE\|EINA_INLIST_FOREACH_SAFE\|EINA_INLIST_REVERSE_FOREACH_FROM\)\s*(.*)\s*;', -1)
 "Проблема красного на красном при spellchecking-е решается так
 highlight SpellBad ctermfg=Black ctermbg=Red
 " хранить больше истории команд

@@ -15,12 +15,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'MattesGroeger/vim-bookmarks'
 
-Plugin 'vim-scripts/DfrankUtil'
-Plugin 'vim-scripts/vimprj'
+" Plugin 'vim-scripts/DfrankUtil'
+" Plugin 'vim-scripts/vimprj'
 " Plugin 'vim-scripts/indexer.tar.gz'
 Plugin 'vim-scripts/grep.vim'
 
 Plugin 'git://git.enlightenment.org/editors/vim-configs.git'
+Plugin 'https://github.com/tpope/vim-pathogen'
+Plugin 'https://github.com/Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,12 +45,7 @@ au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\s\+$',
 au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', 'if(', -1)
 " подсветка табуляции
 au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '	', -1)
-" подсветка условий и циклов без тела
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(if\|for\|while\)\s*(.*)\s*;', -1)
-" подсветка EINA_LIST_ циклов
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(EINA_LIST_FOREACH\|EINA_LIST_REVERSE_FOREACH\|EINA_LIST_FREE\|EINA_LIST_FOREACH_SAFE\|EINA_LIST_REVERSE_FOREACH_SAFE\)\s*(.*)\s*;', -1)
-" подсветка EINA_INLIST_ циклов
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\<\(EINA_INLIST_FOREACH\|EINA_INLIST_REVERSE_FOREACH\|EINA_INLIST_FREE\|EINA_INLIST_FOREACH_SAFE\|EINA_INLIST_REVERSE_FOREACH_FROM\)\s*(.*)\s*;', -1)
+
 "Проблема красного на красном при spellchecking-е решается так
 highlight SpellBad ctermfg=Black ctermbg=Red
 " хранить больше истории команд
@@ -230,4 +227,5 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-let g:indexer_projectsSettingsFilename = '/home/rimmed/.indexer_files'
+let g:ycm_always_populate_location_list = 1
+let g:ycm_extra_conf_globlist = ['~/Work/*','!~/*']

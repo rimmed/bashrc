@@ -14,10 +14,11 @@ NORM="\[\033[m\]"
 
 #LD_LIBRARY_PATH="/usr/local/lib/"
 #PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
-#export EFLETE_PROJECTS_DIR="$HOME/Work/gerrit.surc.kiev/PROJECTS"
-export EFLETE_PROJECTS_DIR="$HOME/Work/PROJECTS"
+export EFLETE_PROJECTS_DIR="$HOME/Work/gerrit.surc.kiev/PROJECTS"
+#export EFLETE_PROJECTS_DIR="$HOME/Work/PROJECTS"
 export PATH="$PATH:$HOME/bin:$HOME/Work/cov-analysis-linux64-8.5.0.1/bin:$HOME/tizen-sdk/tools"
 
+EFL116="$HOME/Work/sandbox/efl-1.16"
 EFL117="$HOME/Work/sandbox/efl-1.17"
 EFL118="$HOME/Work/sandbox/efl-1.18"
 

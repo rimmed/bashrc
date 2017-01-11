@@ -61,3 +61,5 @@ gerrit_patch_push() {
 }
 
 alias gpp=gerrit_patch_push
+
+alias ls="ls -la"

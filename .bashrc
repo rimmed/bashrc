@@ -40,7 +40,7 @@ $LIGHT_PURPLE[\A]$GREEN\u@\h $LIGHT_BLUE~ \$ $NORM"
 PS2=$YELLOW"next line >> "$NORM
 
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls -la --color=auto"
 alias install="make && sudo make install"
 alias vi="vim"
 alias halk="poweroff"
@@ -64,5 +64,3 @@ gerrit_patch_push() {
 }
 
 alias gpp=gerrit_patch_push
-
-alias ls="ls -la"

@@ -29,8 +29,8 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
 #PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')\n\
-PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(__git_ps1 [%s])\n\
-$LIGHT_PURPLE[\A]$GREEN\u@\h $LIGHT_BLUE~ \$ $NORM"
+PS1="\n$LIGHT_PURPLE[\A]$LIGHT_BLUE[\w]$PURPLE\$(__git_ps1 [%s])\n\
+$GREEN\u$LIGHT_BLUE \$ $NORM"
 PS2=$YELLOW"next line >> "$NORM
 
 alias grep="grep --color=auto"

@@ -25,12 +25,6 @@ EFL116="$SANDBOX/efl-1.16"
 EFL117="$SANDBOX/efl-1.17"
 EFL118="$SANDBOX/efl-1.18"
 
-# check the git-promt.sh
-if [ ! -f ~/.git-prompt.sh ]; then
-	wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
-fi
-source ~/.git-prompt.sh
-
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 

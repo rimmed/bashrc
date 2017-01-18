@@ -25,8 +25,9 @@ EFL116="$SANDBOX/efl-1.16"
 EFL117="$SANDBOX/efl-1.17"
 EFL118="$SANDBOX/efl-1.18"
 
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUPSTREAM="verbose"
+source /usr/share/git/completion/git-prompt.sh
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUPSTREAM="verbose"
 
 #PS1="\n$LIGHT_BLUE[\w]$PURPLE\$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')\n\
 PS1="\n$LIGHT_PURPLE[\A]$LIGHT_BLUE[\w]$PURPLE\$(__git_ps1 [%s])\n\

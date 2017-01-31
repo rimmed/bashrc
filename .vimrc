@@ -63,6 +63,9 @@ set hlsearch  " nohlsearch
 nmap <C-G> <esc>:nohlsearch<cr>
 vmap <C-G> <esc>:nohlsearch<cr>
 
+" highlight current line
+set cursorline
+
 " показать непечатаемые символы
 "set listchars=tab:»\ ,eol:¶,trail: ☢`
 " цветовая схема

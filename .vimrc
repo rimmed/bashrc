@@ -223,9 +223,8 @@ function! AirlineInit()
    let g:airline_section_c = airline#section#create(['filetype'])
    let g:airline_section_x = airline#section#create(['%P'])
    let g:airline_section_y = airline#section#create(['%B'])
-   let g:airline_section_y = airline#section#create_right(['%l','%c'])
+   let g:airline_section_z = airline#section#create_right(['%l','%c'])
 endfunction
-autocmd VimEnter * call AirlineInit()
 
 let g:ycm_always_populate_location_list = 1
 let g:ycm_extra_conf_globlist = ['~/Work/*','!~/*']

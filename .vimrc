@@ -14,6 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'flazz/vim-colorschemes'
 
 " Plugin 'vim-scripts/DfrankUtil'
 " Plugin 'vim-scripts/vimprj'
@@ -69,7 +70,7 @@ set cursorline
 " показать непечатаемые символы
 "set listchars=tab:»\ ,eol:¶,trail: ☢`
 " цветовая схема
-colorscheme Yule
+colorscheme Monokai
 " линия ограничитель
 set colorcolumn=81
 " кодировка по умолчанию

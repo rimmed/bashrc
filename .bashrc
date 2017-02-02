@@ -42,7 +42,6 @@ alias halk="poweroff"
 
 export CFLAGS='-g -O2 -Wall -Wextra -Wshadow'
 export MAKEFLAGS='-j9'
-export PATH="$HOME/arcanist/arcanist/bin:$PATH"
 
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then

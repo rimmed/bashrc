@@ -199,6 +199,8 @@ let NERDTreeIgnore=['\.lo$', '\.la$', '\.o$', '\.edj$', '\.eo.h$', '\.eo.c$']
 let NERDTreeWinPos="right"
 
 
+" bookmarks
+let g:bookmark_highlight_lines = 1
 
 
 set laststatus=2

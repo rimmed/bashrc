@@ -184,6 +184,8 @@ nnoremap <F9> :set nolist<cr>
 " F11
 nnoremap <F11> :set list<cr>
 
+" close the current buffer by Alt+w
+nnoremap w <esc>:bdelete<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree

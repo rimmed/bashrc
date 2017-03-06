@@ -25,7 +25,11 @@ EFL116="$SANDBOX/efl-1.16"
 EFL117="$SANDBOX/efl-1.17"
 EFL118="$SANDBOX/efl-1.18"
 
-source /usr/share/git/completion/git-prompt.sh
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	source /usr/share/git/completion/git-prompt.sh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	source /usr/local//etc/bash_completion.d/git-prompt.sh
+fi
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM="verbose"
 

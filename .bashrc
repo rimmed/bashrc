@@ -27,8 +27,10 @@ EFL118="$SANDBOX/efl-1.18"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	source /usr/share/git/completion/git-prompt.sh
+	alias ls="ls -la --color=auto"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source /usr/local//etc/bash_completion.d/git-prompt.sh
+	alias ls="ls -la -G"
 fi
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM="verbose"
@@ -39,7 +41,6 @@ $GREEN\u$LIGHT_BLUE \$ $NORM"
 PS2=$YELLOW"next line >> "$NORM
 
 alias grep="grep --color=auto"
-alias ls="ls -la --color=auto"
 alias install="make && sudo make install"
 alias vi="vim"
 alias halk="poweroff"

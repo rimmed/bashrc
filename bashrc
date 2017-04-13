@@ -41,7 +41,7 @@ $GREEN\u$LIGHT_BLUE \$ $NORM"
 PS2=$YELLOW"next line >> "$NORM
 
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist
-distro_name="cat /etc/issue"
+distro_name=cat /etc/issue
 if [[ $distro_name =~ ^Arch.*$ ]]; then
 	GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 	GEM_PATH=$GEM_HOME

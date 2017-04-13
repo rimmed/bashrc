@@ -25,6 +25,14 @@ Plugin 'git://git.enlightenment.org/editors/vim-configs.git'
 Plugin 'https://github.com/tpope/vim-pathogen'
 Plugin 'https://github.com/Valloric/YouCompleteMe'
 
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plugin 'google/vim-glaive'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -126,8 +134,12 @@ au FileType edc setlocal expandtab sw=3 ts=8 sts=3 syntax=edc
 au FileType sh setlocal noexpandtab sw=4 ts=4 sts=4 syntax=sh
 au FileType tex setlocal noexpandtab sw=4 ts=4 sts=4 syntax=tex
 au FileType python setlocal noexpandtab sw=4 ts=4 sts=4 softtabstop=4 syntax=python
-
 au FileType c,h setlocal syntax=cpp expandtab ts=8 sw=3 sts=3 cino=>5n-3f0^-2{2(0W1st0
+au FileType cpp,hpp,proto AutoFormatBuffer clang-format
+
+call glaive#Install()
+Glaive codefmt plugin[mappings]
+Glaive codefmt clang_format_style="file"
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac

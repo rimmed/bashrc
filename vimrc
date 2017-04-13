@@ -33,6 +33,8 @@ Plugin 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
 
+Plugin 'junegunn/limelight.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -136,6 +138,7 @@ au FileType tex setlocal noexpandtab sw=4 ts=4 sts=4 syntax=tex
 au FileType python setlocal noexpandtab sw=4 ts=4 sts=4 softtabstop=4 syntax=python
 au FileType c,h setlocal syntax=cpp expandtab ts=8 sw=3 sts=3 cino=>5n-3f0^-2{2(0W1st0
 au FileType cpp,hpp,proto AutoFormatBuffer clang-format
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 
 call glaive#Install()
 Glaive codefmt plugin[mappings]

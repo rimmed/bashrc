@@ -83,8 +83,8 @@ set fileencodings=utf8,cp1251
 
 set noswapfile
 
-" remap default keymap layout to russian йцукен
-set keymap=russian-jcukenwin
+" remap default keymap layout to uktainian йцукен
+set keymap=ukrainian-jcuken
 set iminsert=0
 set imsearch=0
 

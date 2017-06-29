@@ -95,6 +95,11 @@ set noswapfile
 " Автоматически перечитывать конфигурацию VIM после сохранения
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
+" remap default keymap layout to russian йцукен
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
 " стрелки табу
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -110,7 +115,6 @@ inoremap <Right> <NOP>
 inoremap <Home> <NOP>
 inoremap <End> <NOP>
 inoremap <Delete> <NOP>
-
 
 "НАСТРОЙКИ ОТСТУПА
 "=====================================================================

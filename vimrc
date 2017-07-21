@@ -71,9 +71,9 @@ nmap <C-G> <esc>:nohlsearch<cr>
 vmap <C-G> <esc>:nohlsearch<cr>
 
 " highlight current line
-set cursorline
+"set cursorline
 " show not printed symbols
-set listchars=tab:»\ ,eol:¶
+"set listchars=tab:»\ ,eol:¶
 
 colorscheme Monokai
 set colorcolumn=81

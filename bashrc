@@ -24,6 +24,8 @@ EFL116_TIZEN="$SANDBOX/efl-1.16_tizen"
 EFL116="$SANDBOX/efl-1.16"
 EFL117="$SANDBOX/efl-1.17"
 EFL118="$SANDBOX/efl-1.18"
+EFL119="$SANDBOX/efl-1.19"
+EFL120="$SANDBOX/efl-1.20"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	source /usr/share/git/completion/git-prompt.sh

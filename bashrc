@@ -29,10 +29,10 @@ EFL120="$SANDBOX/efl-1.20"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	source /usr/share/git/completion/git-prompt.sh
-	alias ls="ls -la --color=auto"
+	alias ls="ls --color=auto"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	source /usr/local//etc/bash_completion.d/git-prompt.sh
-	alias ls="ls -la -G"
+	alias ls="ls -G"
 fi
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUPSTREAM="verbose"

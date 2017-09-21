@@ -16,7 +16,7 @@ NORM="\[\033[m\]"
 #PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
 export EFLETE_PROJECTS_DIR="/tmp"
 #export EFLETE_PROJECTS_DIR="$HOME/Work/PROJECTS"
-export PATH="$PATH:$HOME/bin:$HOME/Work/cov-analysis-linux64-8.5.0.1/bin:$HOME/tizen-sdk/tools"
+export PATH="$PATH:$HOME/bin:$HOME/bin/gcc-arm-none-eabi-4_9-2015q3/bin:$HOME/tizen-sdk/tools"
 
 SANDBOX="$HOME/Workspace/sandbox"
 

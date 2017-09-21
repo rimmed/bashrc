@@ -122,7 +122,7 @@ filetype on
 let c_syntax_for_h=1
 au FileType cpp,hpp,proto AutoFormatBuffer clang-format
 au FileType edc setlocal expandtab sw=3 ts=8 sts=3 syntax=edc
-au FileType sh setlocal noexpandtab sw=4 ts=4 sts=4 syntax=sh
+au FileType sh setlocal expandtab sw=4 ts=4 sts=4 syntax=sh
 au FileType tex setlocal noexpandtab sw=4 ts=4 sts=4 syntax=tex
 au FileType python setlocal noexpandtab sw=4 ts=4 sts=4 softtabstop=4 syntax=python
 au FileType c,h setlocal syntax=c expandtab ts=8 sw=3 sts=3 cino=>5n-3f0^-2{2(0W1st0

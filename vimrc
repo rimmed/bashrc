@@ -137,16 +137,16 @@ set ffs=unix,dos,mac
 
 "====================================================================
 " bindings for C and EDC
-au FileType c,cc,edc inoremap {<CR> {<CR>}<Esc>O
-au FileType c,cc,edc inoremap #d #define
-au FileType c,cc,edc inoremap #u #undef
-au FileType c,cc,edc inoremap #e #endif /*  */<Esc>hhi
-au FileType c,cc,edc inoremap #" #include ""<Esc>i
-au FileType c,cc,edc inoremap #< #include <><Esc>i
-au FileType c,cc,edc inoremap #f /* FIXME:  */<Esc>hhi
-au FileType c,cc,edc inoremap #t /*TODO:  */<Esc>hhi
-au FileType c,cc,edc inoremap ;; <END>;<CR>
-au FileType c,cc,edc inoremap /*<Space> /*  */<Esc>3ha
+au FileType c,h,cpp,hpp,edc inoremap {<CR> {<CR>}<Esc>O
+au FileType c,h,cpp,hpp,edc inoremap #d #define
+au FileType c,h,cpp,hpp,edc inoremap #u #undef
+au FileType c,h,cpp,hpp,edc inoremap #e #endif /*  */<Esc>hhi
+au FileType c,h,cpp,hpp,edc inoremap #" #include ""<Esc>i
+au FileType c,h,cpp,hpp,edc inoremap #< #include <><Esc>i
+au FileType c,h,cpp,hpp,edc inoremap #f /* FIXME:  */<Esc>hhi
+au FileType c,h,cpp,hpp,edc inoremap #t /*TODO:  */<Esc>hhi
+au FileType c,h,cpp,hpp,edc inoremap ;; <END>;<CR>
+au FileType c,h,cpp,hpp,edc inoremap /*<Space> /*  */<Esc>3ha
 
 "====================================================================
 " F2 save file

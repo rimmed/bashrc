@@ -59,7 +59,7 @@ au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '	', -1)
 highlight SpellBad ctermfg=Black ctermbg=Red
 
 set history=128
-set number
+set relativenumber
 syntax on
 " use the system buffer
 set clipboard=unnamed

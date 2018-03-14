@@ -14,14 +14,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'MattesGroeger/vim-bookmarks'
-Plugin 'flazz/vim-colorschemes'
 
-" Plugin 'vim-scripts/DfrankUtil'
-" Plugin 'vim-scripts/vimprj'
-" Plugin 'vim-scripts/indexer.tar.gz'
 Plugin 'vim-scripts/grep.vim'
 
-Plugin 'git://git.enlightenment.org/editors/vim-configs.git'
+Plugin 'https://git.enlightenment.org/editors/vim-configs.git'
 Plugin 'https://github.com/tpope/vim-pathogen'
 Plugin 'https://github.com/Valloric/YouCompleteMe'
 
@@ -49,18 +45,9 @@ set scrolloff=3
 set autoread
 " use 256 color scheme in term
 set t_Co=256
-" hilight the wrong sintax
-au BufNewFile,BufRead * let b:mtrailingws=matchadd('ErrorMsg', '\s\+$', -1)
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '\s\+$', -1)
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', 'if(', -1)
-au BufNewFile,BufRead,WinEnter * let b:mtrailingws=matchadd('ErrorMsg', '	', -1)
-
-" Solve the red on the red bg
-highlight SpellBad ctermfg=Black ctermbg=Red
 
 set history=128
 set number
-set relativenumber
 syntax on
 " use the system buffer
 set clipboard=unnamed
@@ -76,7 +63,7 @@ vmap <C-G> <esc>:nohlsearch<cr>
 " show not printed symbols
 "set listchars=tab:»\ ,eol:¶
 
-colorscheme Monokai
+colorscheme Comfort
 set colorcolumn=81
 set encoding=utf8
 set termencoding=utf-8
@@ -84,10 +71,7 @@ set fileencodings=utf8,cp1251
 
 set noswapfile
 
-" remap default keymap layout to uktainian йцукен
-set keymap=ukrainian-jcuken
-set iminsert=0
-set imsearch=0
+set spell
 
 " arrows taboo
 noremap <Up> <NOP>
@@ -150,18 +134,8 @@ au FileType c,h,cpp,hpp,edc inoremap ;; <END>;<CR>
 au FileType c,h,cpp,hpp,edc inoremap /*<Space> /*  */<Esc>3ha
 
 "====================================================================
-" F2 save file
-nmap <F2> :w<cr>
-vmap <F2> <esc>:w<cr>i
-imap <F2> <esc>:w<cr>i
 " F3 - reqursive search (plagin grep.vim)
 nnoremap <silent> <F3> :Rgrep<cr>
-" F9
-nnoremap <F9> :set nolist<cr>
-" F11
-nnoremap <F11> :set list<cr>
-" close the current buffer by Alt+w
-nnoremap w <esc>:bdelete<cr>
 
 " NERDTree
 "====================================================================
@@ -182,7 +156,6 @@ let g:bookmark_highlight_lines = 1
 set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <leader>1 <Plug>AirlineSelectTab1
@@ -200,6 +173,8 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
+
+let g:airline_symbols.linenr = '¶'
 
 function! AirlineInit()
    let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])

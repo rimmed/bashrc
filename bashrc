@@ -26,6 +26,7 @@ EFL117="$SANDBOX/efl-1.17"
 EFL118="$SANDBOX/efl-1.18"
 EFL119="$SANDBOX/efl-1.19"
 EFL120="$SANDBOX/efl-1.20"
+EFL121="$SANDBOX/efl-1.21"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	source /usr/share/git/completion/git-prompt.sh
@@ -65,3 +66,7 @@ gerrit_patch_push() {
 }
 
 alias gpp=gerrit_patch_push
+alias abort_efl_on='export EINA_LOG_ABORT=1 && export EINA_LOG_ABORT_LEVEL=1 && export EINA_LOG_BACKTRACE=2'
+alias abort_efl_off='export EINA_LOG_ABORT= && export EINA_LOG_ABORT_LEVEL= && export EINA_LOG_BACKTRACE=0'
+
+abort_efl_off

@@ -109,8 +109,9 @@ au FileType cpp,hpp,proto AutoFormatBuffer clang-format
 au FileType edc setlocal expandtab sw=3 ts=8 sts=3 syntax=edc
 au FileType sh setlocal expandtab sw=4 ts=4 sts=4 syntax=sh
 au FileType tex setlocal noexpandtab sw=4 ts=4 sts=4 syntax=tex
-au FileType python setlocal noexpandtab sw=4 ts=4 sts=4 softtabstop=4 syntax=python
+au FileType python setlocal expandtab sw=4 ts=4 sts=4 softtabstop=4 syntax=python
 au FileType c,h setlocal syntax=c expandtab ts=8 sw=3 sts=3 cino=>5n-3f0^-2{2(0W1st0
+au FileType sql setlocal expandtab sw=2 ts=2 sts=2 softtabstop=2 syntax=sql
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 
 call glaive#Install()
@@ -187,5 +188,5 @@ endfunction
 
 " YouCompliteMe
 "====================================================================
-let g:ycm_always_populate_location_list = 1
+"let g:ycm_always_populate_location_list = 1
 let g:ycm_extra_conf_globlist = ['~/Workspace/*','!~/*']
